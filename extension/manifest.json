@@ -1,0 +1,21 @@
+{
+	"name": "YouTube Timestamp Saver",
+	"author": "null",
+	"version": "0.0.1",
+	"permissions": ["activeTab", "contextMenus", "storage", "scripting"],
+	"manifest_version": 3,
+	"description": "Saves youtube timestamps for easy accesbility later.",
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.youtube.com/*"
+			],
+			"js": [
+				"content.js"
+			]
+		}
+	],
+	"background": {
+		"service_worker": "background.js"
+	}
+}
