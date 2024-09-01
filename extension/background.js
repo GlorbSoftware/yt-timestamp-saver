@@ -1,3 +1,8 @@
+// TODO
+// * Fix bug of multiple buttons being created when opening a video in the same tab of a video
+// * Make donate button work
+// * I'm sure there are other issues I'm too stupid to have noticed
+
 let timeStamp = null;
 let linkWithStamp = null;
 let currentTabUrl = null;
