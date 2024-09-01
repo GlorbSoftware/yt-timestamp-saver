@@ -2,8 +2,11 @@
 	"name": "YouTube Timestamp Saver",
 	"author": "null",
 	"version": "0.0.1",
-	"permissions": ["activeTab", "contextMenus", "storage", "scripting"],
+	"permissions": ["activeTab", "tabs", "contextMenus", "storage", "scripting"],
 	"manifest_version": 3,
+	"action": {
+		"default_popup": "ExtensionClicked/popup.html"
+	},	
 	"description": "Saves youtube timestamps for easy accesbility later.",
 	"content_scripts": [
 		{
@@ -17,5 +20,8 @@
 	],
 	"background": {
 		"service_worker": "background.js"
-	}
+	},
+	"host_permissions": [
+		"*://*.youtube.com/*"
+	]
 }
