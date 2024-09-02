@@ -1,6 +1,5 @@
 // TODO
-// * Fix bug of multiple buttons being created when opening a video in the same tab of a video
-// * Make donate button work
+// * Make donate button work — for later
 // * I'm sure there are other issues I'm too stupid to have noticed
 
 let timeStamp = null;
