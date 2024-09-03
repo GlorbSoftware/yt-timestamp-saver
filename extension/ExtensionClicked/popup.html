@@ -5,42 +5,95 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Extension Menu</title>
 	<style>
+		/* Global Styles */
+		:root {
+			--primary-color: #E05748;
+			--background-color: #f4f4f4;
+			--text-color: #333;
+			--border-radius: 8px;
+			--transition-speed: 0.3s;
+		}
+
 		body {
-			font-family: Arial, sans-serif;
-			padding: 10px;
-			width: 300px;
+			font-family: 'Roboto', sans-serif;
+			background-color: var(--background-color);
+			color: var(--text-color);
+			padding: 20px;
+			max-width: 300px;
 			margin: 0 auto;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			border-radius: var(--border-radius);
 		}
-		button {
+
+		img {
 			display: block;
-			margin: 5px 0;
-			width: 100%;
+			margin: 0 auto 20px;
+			max-width: 100px;
+			height: auto;
 		}
+
 		h1 {
 			text-align: center;
-			margin-bottom: 3px;
+			margin-bottom: 5px;
+			font-size: 1.5em;
+			color: var(--primary-color);
 		}
+
 		h3 {
 			text-align: center;
 			margin-top: 0;
+			font-weight: normal;
+			font-size: 1.2em;
+			color: #555;
 		}
+
+		button {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			margin: 10px 0;
+			border: none;
+			border-radius: var(--border-radius);
+			background-color: var(--primary-color);
+			color: #fff;
+			font-size: 1em;
+			cursor: pointer;
+			transition: background-color var(--transition-speed), transform var(--transition-speed);
+		}
+
+		button:hover {
+			background-color: #000000;
+			transform: translateY(-3px);
+		}
+
+		button:active {
+			transform: translateY(-1px);
+		}
+
 		a {
 			display: block;
 			text-align: center;
 			margin-top: 20px;
 			text-decoration: none;
-			color: blue;
+			color: var(--primary-color);
+			font-weight: bold;
+			transition: color var(--transition-speed);
+		}
+
+		a:hover {
+			color: darken(var(--primary-color), 15%);
 		}
 	</style>
 </head>
 <body>
+	<img src="images/logo.svg" alt="Logo">
 	<h1>Youtube Timestamp Saver</h1>
 	<h3>By GlorbSoftware</h3>
 	
-	<button id="button-a">View saved timestamps</button>
+	<button id="button-a">View Saved Timestamps</button>
 	<!--<button id="button-b">Donate</button>-->
 	
-	<a href="https://github.com/GlorbSoftware/yt-timestamp-saver" target="_blank">Github page</a>
+	<a href="https://github.com/GlorbSoftware/yt-timestamp-saver" target="_blank">Github Page</a>
 
 	<script src="popup.js"></script>
 </body>
