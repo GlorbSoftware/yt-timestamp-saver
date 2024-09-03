@@ -1,4 +1,5 @@
 let buttonExists = false;
+const logoUrl = chrome.runtime.getURL('ExtensionClicked/images/logo.png');
 
 // Function to add the custom button to the leftmost position of the right controls
 function addCustomButtonToRight() {
@@ -17,9 +18,13 @@ function addCustomButtonToRight() {
     // Create the custom button
 	const customButton = document.createElement('button');
 	customButton.className = 'ytp-button custom-button';
+	
+	customButton.innerHTML = `<img src="${logoUrl}" alt="Custom Button" style="width: 24px; height: 24px;">`;
+	
+	customButton.style.position = 'relative';
+	customButton.style.top = '-12px';
+	customButton.style.left = '18px';
 
-    // Add image
-	customButton.innerHTML = `<img src="${chrome.runtime.getURL('images/custom-icon.png')}" alt="Custom Button" style="width: 24px; height: 24px;">`;
 
     // Handle the button click
 	customButton.addEventListener('click', () => {

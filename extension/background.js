@@ -1,7 +1,6 @@
 // TODO
 // * Make donate button work — for later
 // * I'm sure there are other issues I'm too stupid to have noticed
-// * Skin this
 
 let timeStamp = null;
 let linkWithStamp = null;
